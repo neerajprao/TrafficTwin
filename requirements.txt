@@ -1,0 +1,20 @@
+# Phase 1 - vehicle detection & counting
+ultralytics
+opencv-python
+
+# Phase 2 - digital twin / OSM import + SUMO itself (bundles sumo/netconvert/netedit binaries)
+osmnx
+eclipse-sumo
+sumolib
+
+# Phase 4 - RL signal control
+sumo-rl
+traci
+gymnasium
+torch
+
+# Phase 5 - analysis & explanation
+pandas
+matplotlib
+requests
+python-dotenv

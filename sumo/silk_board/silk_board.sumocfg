@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Main SUMO configuration for the Silk Board Junction digital twin.
+Run with: sumo -c silk_board.sumocfg           (headless)
+      or: sumo-gui -c silk_board.sumocfg        (visual)
+-->
+<configuration>
+    <input>
+        <net-file value="silk_board.net.xml"/>
+        <route-files value="silk_board.rou.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <end value="3600"/>
+        <step-length value="1"/>
+    </time>
+    <processing>
+        <time-to-teleport value="300"/>
+    </processing>
+    <report>
+        <no-step-log value="true"/>
+        <duration-log.disable value="true"/>
+    </report>
+</configuration>

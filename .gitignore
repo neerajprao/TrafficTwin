@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# large/generated data
+data/video/*
+data/osm/*
+sumo/silk_board/*.net.xml
+*.env
+
+!data/video/.gitkeep
+!data/osm/.gitkeep
