@@ -1,9 +1,25 @@
 # Phase 1 - vehicle detection & counting
 ultralytics
 opencv-python
+huggingface_hub
 
-# Phase 2 - digital twin / OSM import + SUMO itself (bundles sumo/netconvert/netedit binaries)
+# Phase 2 - digital twin / OSM import (custom twin/ engine, no SUMO)
+# pygame has no prebuilt wheel yet for this Python version, so pip builds it
+# from source - needs `brew install sdl2_ttf sdl2_image` first (font/PNG
+# support) or the build silently produces a pygame with those features missing.
 osmnx
+pygame
+# networkx/shapely are already pulled in transitively by osmnx, but twin/
+# (network.py, persistence.py, editor.py, junction_builder.py,
+# lane_network_import.py) imports both directly - listed explicitly so a
+# future osmnx version can't silently drop them out from under twin/.
+networkx
+shapely
+# requests is also used directly by twin/basemap.py (satellite tile fetch),
+# not just by Phase 5's Ollama calls below.
+
+# Legacy Phase 2 pipeline (sumo/, scripts/) - superseded by twin/, kept for
+# Phases 3-5 which still run on it until those are rebuilt
 eclipse-sumo
 sumolib
 
@@ -18,3 +34,4 @@ pandas
 matplotlib
 requests
 python-dotenv
+lap

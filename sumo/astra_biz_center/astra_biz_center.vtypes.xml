@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Vehicle types for the Astra Biz Center (BSD City, Tangerang, Indonesia) digital twin.
+Mix reflects Indonesian urban traffic as seen in the source video: motorcycle-dominant,
+with cars, angkot/vans, buses, and trucks.
+-->
+<additional>
+    <vType id="motorcycle" vClass="motorcycle" length="2.0" width="0.8" minGap="1.0"
+           maxSpeed="25.0" accel="3.5" decel="5.0" sigma="0.6" guiShape="motorcycle"
+           color="1,1,0"/>
+    <vType id="car" vClass="passenger" length="4.5" width="1.8" minGap="2.0"
+           maxSpeed="19.4" accel="2.6" decel="4.5" sigma="0.5" guiShape="passenger"
+           color="0.7,0.7,0.7"/>
+    <vType id="van" vClass="delivery" length="5.5" width="2.0" minGap="2.0"
+           maxSpeed="16.7" accel="2.0" decel="4.0" sigma="0.5" guiShape="delivery"
+           color="0,0.4,0.8"/>
+    <vType id="bus" vClass="bus" length="12.0" width="2.5" minGap="2.5"
+           maxSpeed="15.0" accel="1.2" decel="3.5" sigma="0.5" guiShape="bus"
+           color="0,0.6,0.2"/>
+    <vType id="truck" vClass="truck" length="8.0" width="2.5" minGap="2.5"
+           maxSpeed="14.0" accel="1.0" decel="3.5" sigma="0.5" guiShape="truck"
+           color="0.6,0.3,0"/>
+</additional>

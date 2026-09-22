@@ -29,7 +29,7 @@ Try a signal strategy
 Measure results (mean queue length, mean waiting time, improvement over baseline)
       │
       ▼
-AI (Gemini or Groq) explains the results in plain language
+AI (local LLM via Ollama) explains the results in plain language
 ```
 
 ## Scope (v1)
@@ -60,7 +60,7 @@ Implement the fixed-timer baseline policy, where lights change on a set schedule
 Build a reinforcement learning controller (Q-learning or DQN) using SUMO-RL and TraCI. It observes queue lengths at the junction and learns through trial and error when to keep or switch a green light.
 
 ### Phase 5 — Compare & Explain
-Run both policies on the twin and compare them using mean queue length, mean waiting time, and overall improvement of the learned policy over the baseline. Use a free-tier LLM (Gemini or Groq) to turn these numbers into a plain-language explanation of what happened and why.
+Run both policies on the twin and compare them using mean queue length, mean waiting time, and overall improvement of the learned policy over the baseline. Use a local LLM (via Ollama, no API key needed) to turn these numbers into a plain-language explanation of what happened and why.
 
 ### Phase 6 — Wrap Up
 Finalize the results, double-check everything matches the original scope, and write up the findings.
@@ -69,11 +69,11 @@ Finalize the results, double-check everything matches the original scope, and wr
 
 | Part | What we'll use |
 |---|---|
-| Vehicle detection & counting | YOLO (pretrained, run locally) |
+| Vehicle detection & counting | [geo-trax](https://huggingface.co/rfonod/geo-trax) — YOLOv8s pretrained on aerial/drone footage, run locally |
 | Road layout | OpenStreetMap import |
 | Junction simulation | SUMO (free, open-source traffic simulator) |
 | Learned signal policy | Q-learning / DQN via SUMO-RL + TraCI |
-| Explaining results | Gemini or Groq (free tier) |
+| Explaining results | Local LLM via [Ollama](https://ollama.com) (`qwen2.5:7b-instruct`) — no API key needed |
 
 Everything runs on free tools and a normal laptop — no paid software or special hardware required.
 
@@ -89,8 +89,8 @@ Everything runs on free tools and a normal laptop — no paid software or specia
 - **A recorded traffic video clip** of one junction, ideally with a clear top-down or angled view of all lanes and decent lighting.
 - **Manual vehicle counts** for a portion of the clip, so we can check YOLO's accuracy (count MAE).
 - **Confirmation of the junction's location or layout** (e.g. an address or map link) so the road layout can be imported from OpenStreetMap.
-- **A free-tier API key for Gemini or Groq** (whichever you prefer) for the AI-generated result explanations.
-- **A laptop that can run Python, SUMO, and YOLO** (no special hardware needed, but a bit of free disk space and RAM helps).
+- **Ollama installed locally** (free, no API key) for the AI-generated result explanations — `qwen2.5:7b-instruct` is the model currently used.
+- **A laptop that can run Python, SUMO, and the vehicle detection model** (no special hardware needed, but a bit of free disk space and RAM helps).
 - **Decisions on open questions when they come up** — e.g. approving the calibration of the simulation, or picking which junction/clip to focus on if there are multiple options.
 
 ## Risks & Open Questions
@@ -99,4 +99,4 @@ Everything runs on free tools and a normal laptop — no paid software or specia
 - OpenStreetMap data for the junction may need manual cleanup to match reality.
 - Calibrating SUMO so its traffic matches the video may take some trial and error.
 - The learned policy (Q-learning/DQN) may need simplified rules to train in reasonable time.
-- Free-tier AI explanation calls may be rate-limited.
+- The local LLM (Ollama) must be running (`ollama serve`) before Phase 5 can generate its explanation — easy to forget since it's not always running by default.

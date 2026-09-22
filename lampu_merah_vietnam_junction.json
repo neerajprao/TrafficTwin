@@ -1,0 +1,692 @@
+{
+  "nodes": {
+    "-1": [
+      106.638986611,
+      -6.286789775
+    ],
+    "-2": [
+      106.638986611,
+      -6.286494317
+    ],
+    "-3": [
+      106.639021907,
+      -6.286789775
+    ],
+    "-4": [
+      106.639021907,
+      -6.286494317
+    ],
+    "-5": [
+      106.639048748,
+      -6.286789775
+    ],
+    "-6": [
+      106.639048748,
+      -6.286494317
+    ],
+    "-7": [
+      106.639262674,
+      -6.287211474
+    ],
+    "-8": [
+      106.639262674,
+      -6.287474701
+    ],
+    "-9": [
+      106.639229927,
+      -6.287147011
+    ],
+    "-10": [
+      106.639229927,
+      -6.287474701
+    ],
+    "-11": [
+      106.639192886,
+      -6.287147011
+    ],
+    "-12": [
+      106.639192886,
+      -6.287474701
+    ],
+    "-13": [
+      106.638938967,
+      -6.287129552
+    ],
+    "-14": [
+      106.638697396,
+      -6.287129552
+    ],
+    "-15": [
+      106.638965809,
+      -6.287094634
+    ],
+    "-16": [
+      106.638697396,
+      -6.287094634
+    ],
+    "-17": [
+      106.638965809,
+      -6.287061865
+    ],
+    "-18": [
+      106.638697396,
+      -6.287061865
+    ],
+    "-19": [
+      106.639427479,
+      -6.286926760
+    ],
+    "-20": [
+      106.639703945,
+      -6.286926760
+    ],
+    "-21": [
+      106.639314746,
+      -6.286953620
+    ],
+    "-22": [
+      106.639703945,
+      -6.286953620
+    ],
+    "-23": [
+      106.639314746,
+      -6.286976451
+    ],
+    "-24": [
+      106.639703945,
+      -6.286976451
+    ],
+    "-25": [
+      106.639232611,
+      -6.286494317
+    ],
+    "-26": [
+      106.639232611,
+      -6.286770973
+    ],
+    "-27": [
+      106.639263646,
+      -6.286842520
+    ],
+    "-28": [
+      106.639337984,
+      -6.286901950
+    ],
+    "-29": [
+      106.639202281,
+      -6.286779031
+    ],
+    "-30": [
+      106.639202281,
+      -6.286494317
+    ],
+    "-31": [
+      106.639169534,
+      -6.286779031
+    ],
+    "-32": [
+      106.639169534,
+      -6.286494317
+    ],
+    "-33": [
+      106.639130212,
+      -6.286779031
+    ],
+    "-34": [
+      106.639130212,
+      -6.286494317
+    ],
+    "-35": [
+      106.639024860,
+      -6.287474701
+    ],
+    "-36": [
+      106.639024860,
+      -6.287259822
+    ],
+    "-37": [
+      106.639011181,
+      -6.287199994
+    ],
+    "-38": [
+      106.638978414,
+      -6.287150299
+    ],
+    "-39": [
+      106.639053043,
+      -6.287219532
+    ],
+    "-40": [
+      106.639053043,
+      -6.287474701
+    ],
+    "-41": [
+      106.639087266,
+      -6.287219532
+    ],
+    "-42": [
+      106.639087266,
+      -6.287474701
+    ],
+    "-43": [
+      106.639119878,
+      -6.287219532
+    ],
+    "-44": [
+      106.639119878,
+      -6.287474701
+    ],
+    "-45": [
+      106.638697396,
+      -6.286885933
+    ],
+    "-46": [
+      106.638890653,
+      -6.286885933
+    ],
+    "-47": [
+      106.638934723,
+      -6.286870619
+    ],
+    "-48": [
+      106.638971329,
+      -6.286833936
+    ],
+    "-49": [
+      106.638910516,
+      -6.286916822
+    ],
+    "-50": [
+      106.638697396,
+      -6.286916822
+    ],
+    "-51": [
+      106.638910516,
+      -6.286945025
+    ],
+    "-52": [
+      106.638697396,
+      -6.286945025
+    ],
+    "-53": [
+      106.638910516,
+      -6.286975108
+    ],
+    "-54": [
+      106.638697396,
+      -6.286975108
+    ],
+    "-55": [
+      106.639703945,
+      -6.287098663
+    ],
+    "-56": [
+      106.639373797,
+      -6.287098663
+    ],
+    "-57": [
+      106.639322762,
+      -6.287116629
+    ],
+    "-58": [
+      106.639280371,
+      -6.287159665
+    ],
+    "-59": [
+      106.639357692,
+      -6.287071266
+    ],
+    "-60": [
+      106.639703945,
+      -6.287071266
+    ],
+    "-61": [
+      106.639357692,
+      -6.287047629
+    ],
+    "-62": [
+      106.639703945,
+      -6.287047629
+    ],
+    "-63": [
+      106.639357692,
+      -6.287026679
+    ],
+    "-64": [
+      106.639703945,
+      -6.287026679
+    ],
+    "-65": [
+      106.639206600,
+      -6.286878042
+    ],
+    "-66": [
+      106.639216104,
+      -6.286963021
+    ],
+    "-67": [
+      106.639225607,
+      -6.287047999
+    ],
+    "-68": [
+      106.639173183,
+      -6.286878009
+    ],
+    "-69": [
+      106.639181210,
+      -6.286963021
+    ],
+    "-70": [
+      106.639189237,
+      -6.287048033
+    ],
+    "-71": [
+      106.639123742,
+      -6.286849085
+    ],
+    "-72": [
+      106.639105856,
+      -6.286915210
+    ],
+    "-73": [
+      106.639078836,
+      -6.286973479
+    ],
+    "-74": [
+      106.639044966,
+      -6.287019964
+    ],
+    "-75": [
+      106.639006529,
+      -6.287050735
+    ],
+    "-76": [
+      106.639127931,
+      -6.286824295
+    ],
+    "-77": [
+      106.639121740,
+      -6.286860083
+    ],
+    "-78": [
+      106.639112616,
+      -6.286886266
+    ],
+    "-79": [
+      106.639101537,
+      -6.286902715
+    ],
+    "-80": [
+      106.639089480,
+      -6.286909301
+    ],
+    "-81": [
+      106.639077423,
+      -6.286905895
+    ],
+    "-82": [
+      106.639066344,
+      -6.286892369
+    ],
+    "-83": [
+      106.639057221,
+      -6.286868592
+    ],
+    "-84": [
+      106.639051029,
+      -6.286834437
+    ],
+    "-85": [
+      106.639048178,
+      -6.287103908
+    ],
+    "-86": [
+      106.639037475,
+      -6.287004654
+    ],
+    "-87": [
+      106.639026772,
+      -6.286905399
+    ],
+    "-88": [
+      106.639081247,
+      -6.287103841
+    ],
+    "-89": [
+      106.639068007,
+      -6.287004654
+    ],
+    "-90": [
+      106.639054767,
+      -6.286905466
+    ],
+    "-91": [
+      106.639127546,
+      -6.287159325
+    ],
+    "-92": [
+      106.639148747,
+      -6.287102493
+    ],
+    "-93": [
+      106.639180774,
+      -6.287052414
+    ],
+    "-94": [
+      106.639220920,
+      -6.287012463
+    ],
+    "-95": [
+      106.639266480,
+      -6.286986016
+    ],
+    "-96": [
+      106.639121922,
+      -6.287172538
+    ],
+    "-97": [
+      106.639127471,
+      -6.287132055
+    ],
+    "-98": [
+      106.639135648,
+      -6.287098953
+    ],
+    "-99": [
+      106.639145577,
+      -6.287074102
+    ],
+    "-100": [
+      106.639156382,
+      -6.287058373
+    ],
+    "-101": [
+      106.639167187,
+      -6.287052636
+    ],
+    "-102": [
+      106.639177116,
+      -6.287057761
+    ],
+    "-103": [
+      106.639185293,
+      -6.287074618
+    ],
+    "-104": [
+      106.639190842,
+      -6.287104078
+    ],
+    "-105": [
+      106.639019340,
+      -6.286922572
+    ],
+    "-106": [
+      106.639112631,
+      -6.286935221
+    ],
+    "-107": [
+      106.639205921,
+      -6.286947870
+    ],
+    "-108": [
+      106.639019290,
+      -6.286949935
+    ],
+    "-109": [
+      106.639112631,
+      -6.286960738
+    ],
+    "-110": [
+      106.639205972,
+      -6.286971540
+    ],
+    "-111": [
+      106.638980455,
+      -6.286981872
+    ],
+    "-112": [
+      106.639046472,
+      -6.287000575
+    ],
+    "-113": [
+      106.639104645,
+      -6.287028827
+    ],
+    "-114": [
+      106.639151054,
+      -6.287064243
+    ],
+    "-115": [
+      106.639181774,
+      -6.287104433
+    ],
+    "-116": [
+      106.638956996,
+      -6.286977537
+    ],
+    "-117": [
+      106.638996146,
+      -6.286984131
+    ],
+    "-118": [
+      106.639027301,
+      -6.286993847
+    ],
+    "-119": [
+      106.639049798,
+      -6.287005646
+    ],
+    "-120": [
+      106.639062974,
+      -6.287018486
+    ],
+    "-121": [
+      106.639066165,
+      -6.287031326
+    ],
+    "-122": [
+      106.639058708,
+      -6.287043125
+    ],
+    "-123": [
+      106.639039938,
+      -6.287052842
+    ],
+    "-124": [
+      106.639009193,
+      -6.287059436
+    ],
+    "-125": [
+      106.639252295,
+      -6.287074917
+    ],
+    "-126": [
+      106.639161750,
+      -6.287082950
+    ],
+    "-127": [
+      106.639071206,
+      -6.287090983
+    ],
+    "-128": [
+      106.639252344,
+      -6.287049854
+    ],
+    "-129": [
+      106.639161750,
+      -6.287054747
+    ],
+    "-130": [
+      106.639071156,
+      -6.287059641
+    ],
+    "-131": [
+      106.639281171,
+      -6.287017356
+    ],
+    "-132": [
+      106.639208941,
+      -6.286991582
+    ],
+    "-133": [
+      106.639145293,
+      -6.286952646
+    ],
+    "-134": [
+      106.639094518,
+      -6.286903840
+    ],
+    "-135": [
+      106.639060906,
+      -6.286848452
+    ],
+    "-136": [
+      106.639311557,
+      -6.287025272
+    ],
+    "-137": [
+      106.639273346,
+      -6.287021455
+    ],
+    "-138": [
+      106.639243573,
+      -6.287015829
+    ],
+    "-139": [
+      106.639222755,
+      -6.287008998
+    ],
+    "-140": [
+      106.639211407,
+      -6.287001565
+    ],
+    "-141": [
+      106.639210043,
+      -6.286994131
+    ],
+    "-142": [
+      106.639219180,
+      -6.286987300
+    ],
+    "-143": [
+      106.639239332,
+      -6.286981674
+    ],
+    "-144": [
+      106.639271016,
+      -6.286977857
+    ],
+    "-145": [
+      106.639168729,
+      -6.286808577
+    ],
+    "-146": [
+      106.639106726,
+      -6.286779031
+    ],
+    "-147": [
+      106.639219459,
+      -6.286779031
+    ],
+    "-148": [
+      106.639081226,
+      -6.287188643
+    ],
+    "-149": [
+      106.639035596,
+      -6.287219532
+    ],
+    "-150": [
+      106.639135580,
+      -6.287219532
+    ],
+    "-151": [
+      106.638936283,
+      -6.286945562
+    ],
+    "-152": [
+      106.638910516,
+      -6.286902586
+    ],
+    "-153": [
+      106.638910516,
+      -6.286991224
+    ],
+    "-154": [
+      106.639325482,
+      -6.287042257
+    ],
+    "-155": [
+      106.639357692,
+      -6.287015398
+    ],
+    "-156": [
+      106.639357692,
+      -6.287085233
+    ]
+  },
+  "lanes": [
+    {"id": "N_out_1", "arm": "N", "kind": "exit", "travel_direction": "N", "index_from_kerb": 1, "width_m": 3.3, "nodes": ["-1", "-2"], "movements": []},
+    {"id": "N_out_2", "arm": "N", "kind": "exit", "travel_direction": "N", "index_from_kerb": 2, "width_m": 3.3, "nodes": ["-3", "-4"], "movements": []},
+    {"id": "N_out_3", "arm": "N", "kind": "exit", "travel_direction": "N", "index_from_kerb": 3, "width_m": 3.3, "nodes": ["-5", "-6"], "movements": []},
+    {"id": "S_out_1", "arm": "S", "kind": "exit", "travel_direction": "S", "index_from_kerb": 1, "width_m": 3.3, "nodes": ["-7", "-8"], "movements": []},
+    {"id": "S_out_2", "arm": "S", "kind": "exit", "travel_direction": "S", "index_from_kerb": 2, "width_m": 3.3, "nodes": ["-9", "-10"], "movements": []},
+    {"id": "S_out_3", "arm": "S", "kind": "exit", "travel_direction": "S", "index_from_kerb": 3, "width_m": 3.3, "nodes": ["-11", "-12"], "movements": []},
+    {"id": "W_out_1", "arm": "W", "kind": "exit", "travel_direction": "W", "index_from_kerb": 1, "width_m": 3.3, "nodes": ["-13", "-14"], "movements": []},
+    {"id": "W_out_2", "arm": "W", "kind": "exit", "travel_direction": "W", "index_from_kerb": 2, "width_m": 3.3, "nodes": ["-15", "-16"], "movements": []},
+    {"id": "W_out_3", "arm": "W", "kind": "exit", "travel_direction": "W", "index_from_kerb": 3, "width_m": 3.3, "nodes": ["-17", "-18"], "movements": []},
+    {"id": "E_out_1", "arm": "E", "kind": "exit", "travel_direction": "E", "index_from_kerb": 1, "width_m": 3.3, "nodes": ["-19", "-20"], "movements": []},
+    {"id": "E_out_2", "arm": "E", "kind": "exit", "travel_direction": "E", "index_from_kerb": 2, "width_m": 3.3, "nodes": ["-21", "-22"], "movements": []},
+    {"id": "E_out_3", "arm": "E", "kind": "exit", "travel_direction": "E", "index_from_kerb": 3, "width_m": 3.3, "nodes": ["-23", "-24"], "movements": []},
+    {"id": "N_in_1", "arm": "N", "kind": "free_left_slip", "travel_direction": "S", "index_from_kerb": 1, "width_m": 3.3, "nodes": ["-25", "-26", "-27", "-28", "-19"], "movements": ["left"], "controlled_by_signal": false, "merges_into": "E_out_1"},
+    {"id": "N_in_2", "arm": "N", "kind": "approach", "travel_direction": "S", "index_from_kerb": 2, "width_m": 3.3, "nodes": ["-30", "-29"], "signal_group": "N", "movements": ["straight"], "controlled_by_signal": true},
+    {"id": "N_in_3", "arm": "N", "kind": "approach", "travel_direction": "S", "index_from_kerb": 3, "width_m": 3.3, "nodes": ["-32", "-31"], "signal_group": "N", "movements": ["straight"], "controlled_by_signal": true},
+    {"id": "N_in_4", "arm": "N", "kind": "approach", "travel_direction": "S", "index_from_kerb": 4, "width_m": 3.3, "nodes": ["-34", "-33"], "signal_group": "N", "movements": ["right", "u_turn"], "controlled_by_signal": true},
+    {"id": "S_in_1", "arm": "S", "kind": "free_left_slip", "travel_direction": "N", "index_from_kerb": 1, "width_m": 3.3, "nodes": ["-35", "-36", "-37", "-38", "-13"], "movements": ["left"], "controlled_by_signal": false, "merges_into": "W_out_1"},
+    {"id": "S_in_2", "arm": "S", "kind": "approach", "travel_direction": "N", "index_from_kerb": 2, "width_m": 3.3, "nodes": ["-40", "-39"], "signal_group": "S", "movements": ["straight"], "controlled_by_signal": true},
+    {"id": "S_in_3", "arm": "S", "kind": "approach", "travel_direction": "N", "index_from_kerb": 3, "width_m": 3.3, "nodes": ["-42", "-41"], "signal_group": "S", "movements": ["straight"], "controlled_by_signal": true},
+    {"id": "S_in_4", "arm": "S", "kind": "approach", "travel_direction": "N", "index_from_kerb": 4, "width_m": 3.3, "nodes": ["-44", "-43"], "signal_group": "S", "movements": ["right", "u_turn"], "controlled_by_signal": true},
+    {"id": "W_in_1", "arm": "W", "kind": "free_left_slip", "travel_direction": "E", "index_from_kerb": 1, "width_m": 3.3, "nodes": ["-45", "-46", "-47", "-48", "-1"], "movements": ["left"], "controlled_by_signal": false, "merges_into": "N_out_1"},
+    {"id": "W_in_2", "arm": "W", "kind": "approach", "travel_direction": "E", "index_from_kerb": 2, "width_m": 3.3, "nodes": ["-50", "-49"], "signal_group": "W", "movements": ["straight"], "controlled_by_signal": true},
+    {"id": "W_in_3", "arm": "W", "kind": "approach", "travel_direction": "E", "index_from_kerb": 3, "width_m": 3.3, "nodes": ["-52", "-51"], "signal_group": "W", "movements": ["straight"], "controlled_by_signal": true},
+    {"id": "W_in_4", "arm": "W", "kind": "approach", "travel_direction": "E", "index_from_kerb": 4, "width_m": 3.3, "nodes": ["-54", "-53"], "signal_group": "W", "movements": ["right", "u_turn"], "controlled_by_signal": true},
+    {"id": "E_in_1", "arm": "E", "kind": "free_left_slip", "travel_direction": "W", "index_from_kerb": 1, "width_m": 3.3, "nodes": ["-55", "-56", "-57", "-58", "-7"], "movements": ["left"], "controlled_by_signal": false, "merges_into": "S_out_1"},
+    {"id": "E_in_2", "arm": "E", "kind": "approach", "travel_direction": "W", "index_from_kerb": 2, "width_m": 3.3, "nodes": ["-60", "-59"], "signal_group": "E", "movements": ["straight"], "controlled_by_signal": true},
+    {"id": "E_in_3", "arm": "E", "kind": "approach", "travel_direction": "W", "index_from_kerb": 3, "width_m": 3.3, "nodes": ["-62", "-61"], "signal_group": "E", "movements": ["straight"], "controlled_by_signal": true},
+    {"id": "E_in_4", "arm": "E", "kind": "approach", "travel_direction": "W", "index_from_kerb": 4, "width_m": 3.3, "nodes": ["-64", "-63"], "signal_group": "E", "movements": ["right", "u_turn"], "controlled_by_signal": true}
+  ],
+  "connections": [
+    {"id": "N_in_2__straight__S_out_2", "movement": "straight", "from_lane": "N_in_2", "to_lane": "S_out_2", "signal_group": "N", "phase": "P_N", "nodes": ["-29", "-65", "-66", "-67", "-9"]},
+    {"id": "N_in_3__straight__S_out_3", "movement": "straight", "from_lane": "N_in_3", "to_lane": "S_out_3", "signal_group": "N", "phase": "P_N", "nodes": ["-31", "-68", "-69", "-70", "-11"]},
+    {"id": "N_in_4__right__W_out_3", "movement": "right", "from_lane": "N_in_4", "to_lane": "W_out_3", "signal_group": "N", "phase": "P_N", "nodes": ["-33", "-71", "-72", "-73", "-74", "-75", "-17"]},
+    {"id": "N_in_4__u_turn__N_out_3", "movement": "u_turn", "from_lane": "N_in_4", "to_lane": "N_out_3", "signal_group": "N", "phase": "P_N", "nodes": ["-33", "-76", "-77", "-78", "-79", "-80", "-81", "-82", "-83", "-84", "-5"]},
+    {"id": "S_in_2__straight__N_out_2", "movement": "straight", "from_lane": "S_in_2", "to_lane": "N_out_2", "signal_group": "S", "phase": "P_S", "nodes": ["-39", "-85", "-86", "-87", "-3"]},
+    {"id": "S_in_3__straight__N_out_3", "movement": "straight", "from_lane": "S_in_3", "to_lane": "N_out_3", "signal_group": "S", "phase": "P_S", "nodes": ["-41", "-88", "-89", "-90", "-5"]},
+    {"id": "S_in_4__right__E_out_3", "movement": "right", "from_lane": "S_in_4", "to_lane": "E_out_3", "signal_group": "S", "phase": "P_S", "nodes": ["-43", "-91", "-92", "-93", "-94", "-95", "-23"]},
+    {"id": "S_in_4__u_turn__S_out_3", "movement": "u_turn", "from_lane": "S_in_4", "to_lane": "S_out_3", "signal_group": "S", "phase": "P_S", "nodes": ["-43", "-96", "-97", "-98", "-99", "-100", "-101", "-102", "-103", "-104", "-11"]},
+    {"id": "W_in_2__straight__E_out_2", "movement": "straight", "from_lane": "W_in_2", "to_lane": "E_out_2", "signal_group": "W", "phase": "P_W", "nodes": ["-49", "-105", "-106", "-107", "-21"]},
+    {"id": "W_in_3__straight__E_out_3", "movement": "straight", "from_lane": "W_in_3", "to_lane": "E_out_3", "signal_group": "W", "phase": "P_W", "nodes": ["-51", "-108", "-109", "-110", "-23"]},
+    {"id": "W_in_4__right__S_out_3", "movement": "right", "from_lane": "W_in_4", "to_lane": "S_out_3", "signal_group": "W", "phase": "P_W", "nodes": ["-53", "-111", "-112", "-113", "-114", "-115", "-11"]},
+    {"id": "W_in_4__u_turn__W_out_3", "movement": "u_turn", "from_lane": "W_in_4", "to_lane": "W_out_3", "signal_group": "W", "phase": "P_W", "nodes": ["-53", "-116", "-117", "-118", "-119", "-120", "-121", "-122", "-123", "-124", "-17"]},
+    {"id": "E_in_2__straight__W_out_2", "movement": "straight", "from_lane": "E_in_2", "to_lane": "W_out_2", "signal_group": "E", "phase": "P_E", "nodes": ["-59", "-125", "-126", "-127", "-15"]},
+    {"id": "E_in_3__straight__W_out_3", "movement": "straight", "from_lane": "E_in_3", "to_lane": "W_out_3", "signal_group": "E", "phase": "P_E", "nodes": ["-61", "-128", "-129", "-130", "-17"]},
+    {"id": "E_in_4__right__N_out_3", "movement": "right", "from_lane": "E_in_4", "to_lane": "N_out_3", "signal_group": "E", "phase": "P_E", "nodes": ["-63", "-131", "-132", "-133", "-134", "-135", "-5"]},
+    {"id": "E_in_4__u_turn__E_out_3", "movement": "u_turn", "from_lane": "E_in_4", "to_lane": "E_out_3", "signal_group": "E", "phase": "P_E", "nodes": ["-63", "-136", "-137", "-138", "-139", "-140", "-141", "-142", "-143", "-144", "-23"]},
+    {"id": "N_in_1__left__E_out_1", "movement": "left", "from_lane": "N_in_1", "to_lane": "E_out_1", "signal_group": null, "phase": null, "nodes": ["-26", "-27", "-28", "-19"]},
+    {"id": "S_in_1__left__W_out_1", "movement": "left", "from_lane": "S_in_1", "to_lane": "W_out_1", "signal_group": null, "phase": null, "nodes": ["-36", "-37", "-38", "-13"]},
+    {"id": "W_in_1__left__N_out_1", "movement": "left", "from_lane": "W_in_1", "to_lane": "N_out_1", "signal_group": null, "phase": null, "nodes": ["-46", "-47", "-48", "-1"]},
+    {"id": "E_in_1__left__S_out_1", "movement": "left", "from_lane": "E_in_1", "to_lane": "S_out_1", "signal_group": null, "phase": null, "nodes": ["-56", "-57", "-58", "-7"]}
+  ],
+  "traffic_signals": [
+    {"id": "TS_N", "node": "-145", "arm": "N", "controls_travel_direction": "S", "aspects": ["red", "yellow", "green"], "stop_line": ["-146", "-147"], "controlled_lanes": ["N_in_2", "N_in_3", "N_in_4"], "excluded_lanes": ["N_in_1"], "phase": "P_N"},
+    {"id": "TS_S", "node": "-148", "arm": "S", "controls_travel_direction": "N", "aspects": ["red", "yellow", "green"], "stop_line": ["-149", "-150"], "controlled_lanes": ["S_in_2", "S_in_3", "S_in_4"], "excluded_lanes": ["S_in_1"], "phase": "P_S"},
+    {"id": "TS_W", "node": "-151", "arm": "W", "controls_travel_direction": "E", "aspects": ["red", "yellow", "green"], "stop_line": ["-152", "-153"], "controlled_lanes": ["W_in_2", "W_in_3", "W_in_4"], "excluded_lanes": ["W_in_1"], "phase": "P_W"},
+    {"id": "TS_E", "node": "-154", "arm": "E", "controls_travel_direction": "W", "aspects": ["red", "yellow", "green"], "stop_line": ["-155", "-156"], "controlled_lanes": ["E_in_2", "E_in_3", "E_in_4"], "excluded_lanes": ["E_in_1"], "phase": "P_E"}
+  ],
+  "signal_phases": [
+    {"id": "P_N", "green_for_approach": "N", "movements": ["straight", "right", "u_turn"], "conflicts_with": ["S", "W", "E"], "free_left_active": true},
+    {"id": "P_S", "green_for_approach": "S", "movements": ["straight", "right", "u_turn"], "conflicts_with": ["N", "W", "E"], "free_left_active": true},
+    {"id": "P_W", "green_for_approach": "W", "movements": ["straight", "right", "u_turn"], "conflicts_with": ["N", "S", "E"], "free_left_active": true},
+    {"id": "P_E", "green_for_approach": "E", "movements": ["straight", "right", "u_turn"], "conflicts_with": ["N", "S", "W"], "free_left_active": true}
+  ]
+}

@@ -1,109 +1,100 @@
-"""Generate synthetic traffic demand for the Silk Board Junction digital twin.
-
-Silk Board is one of Bangalore's most congested junctions, so demand is set heavy
-and motorcycle-dominant to reflect the real vehicle mix. This is a placeholder
-until a recorded video + manual counts are available to calibrate real demand
-(see PLAN.md Phase 2).
-
-Workflow: randomTrips.py picks random origin/destination pairs biased toward the
-network's fringe (boundary) edges -- i.e. the real arms of the junction -- for
-each vehicle class separately (so we control the mode split), then duarouter
-merges everything and computes real routes through the network.
 """
-import os
+Phase 2 - generates synthetic traffic demand for the Astra Biz Center
+junction so the digital twin is drivable end-to-end. Mode split is
+calibrated against the geo-trax model's per-class vehicle counts from the
+source video (see detection/count_vehicles.py).
+"""
 import subprocess
 import sys
 
-import sumo as _sumo
+NET = "sumo/astra_biz_center/astra_biz_center.net.xml"
+VTYPES = "sumo/astra_biz_center/astra_biz_center.vtypes.xml"
+OUT_DIR = "sumo/astra_biz_center"
+SIM_END = 3600  # seconds (1 hour)
 
-SUMO_HOME = _sumo.SUMO_HOME
-RANDOM_TRIPS = os.path.join(SUMO_HOME, "tools", "randomTrips.py")
+RANDOM_TRIPS = ".venv/lib/python3.14/site-packages/sumo/tools/randomTrips.py"
 
-NET_FILE = "sumo/silk_board/silk_board.net.xml"
-OUT_DIR = "sumo/silk_board"
-SIM_DURATION_S = 3600  # 1 hour simulation
-SEED = 42
+# vehicles/hour per type. Ratio calibrated from the geo-trax model's unique
+# tracker-ID counts over the full 82.28s source video (Car 802, Motorcycle
+# 1347, Truck 288, Bus 143 - see detection/count_vehicles.py and
+# PROGRESS.md). Absolute counts aren't used directly for veh/h since
+# track-ID fragmentation inflates them - only the *proportions between
+# classes* are trusted. geo-trax has no separate "van" class (it folds vans
+# into "Car"), so the detected car share is split 80/20 between car/van,
+# matching the previous car:van ratio. Total demand held at ~4330 veh/h
+# (same level previously sanity-checked to produce plausible congestion).
+MODE_SPLIT = {
+    "motorcycle": 2260,
+    "car": 1080,
+    "van": 270,
+    "truck": 480,
+    "bus": 240,
+}
 
-# Mode split modeled on typical Bangalore arterial junction traffic
-# (motorcycle-dominant, sizeable autos, cars, some buses/trucks).
-# vclass = SUMO permission class used to pick valid fringe edges for that mode.
-# vtype  = the custom vType id from silk_board.vtypes.xml assigned to each trip.
-# veh_per_hour = target demand for that mode over the full simulation.
-MODES = [
-    {"name": "motorcycle", "vclass": "motorcycle", "vtype": "motorcycle", "veh_per_hour": 2000},
-    {"name": "car", "vclass": "passenger", "vtype": "car", "veh_per_hour": 1200},
-    {"name": "auto", "vclass": "taxi", "vtype": "auto_rickshaw", "veh_per_hour": 480},
-    {"name": "truck", "vclass": "truck", "vtype": "truck", "veh_per_hour": 200},
-    {"name": "bus", "vclass": "bus", "vtype": "bus", "veh_per_hour": 120},
-]
-
-# Bias trip endpoints strongly toward the network's boundary edges (the real
-# roads entering/leaving the modeled area) rather than picking short hops
-# between interior junctions.
-FRINGE_FACTOR = 100
+VCLASS_MAP = {
+    "motorcycle": "motorcycle",
+    "car": "passenger",
+    "van": "delivery",
+    "truck": "truck",
+    "bus": "bus",
+}
 
 
-def main():
-    trip_files = []
-    for mode in MODES:
-        period = SIM_DURATION_S / mode["veh_per_hour"]
-        trip_file = f"{OUT_DIR}/silk_board.{mode['name']}.trips.xml"
-        cmd = [
-            sys.executable, RANDOM_TRIPS,
-            "-n", NET_FILE,
-            "-o", trip_file,
-            "-b", "0", "-e", str(SIM_DURATION_S),
-            "-p", str(period),
-            "--fringe-factor", str(FRINGE_FACTOR),
-            "--vclass", mode["vclass"],
-            "--trip-attributes", f'type="{mode["vtype"]}"',
-            "--prefix", mode["name"],
-            "--seed", str(SEED),
-            "--validate",
-        ]
-        print(f"Generating {mode['name']} trips (~{mode['veh_per_hour']} veh/h, period={period:.2f}s)...")
-        subprocess.run(cmd, check=True)
-        trip_files.append(trip_file)
-
-    # Merge all per-mode trip files into one, sorted by departure time.
-    merged_trips = f"{OUT_DIR}/silk_board.trips.xml"
-    merge_trip_files(trip_files, merged_trips)
-
-    # Route the merged trips through the real network -> final .rou.xml
-    routed_file = f"{OUT_DIR}/silk_board.rou.xml"
-    duarouter = os.path.join(SUMO_HOME, "bin", "duarouter") if os.path.exists(
-        os.path.join(SUMO_HOME, "bin", "duarouter")
-    ) else "duarouter"
+def run_random_trips(veh_type: str, veh_per_hour: int) -> str:
+    period = 3600.0 / veh_per_hour
+    out_trips = f"{OUT_DIR}/astra_biz_center.{veh_type}.trips.xml"
     cmd = [
-        duarouter,
-        "-n", NET_FILE,
-        "-r", merged_trips,
-        "-a", f"{OUT_DIR}/silk_board.vtypes.xml",
-        "-o", routed_file,
-        "--ignore-errors",
-        "--seed", str(SEED),
+        sys.executable, RANDOM_TRIPS,
+        "-n", NET,
+        "-o", out_trips,
+        "--begin", "0",
+        "--end", str(SIM_END),
+        "--period", str(period),
+        "--fringe-factor", "100",
+        "--vclass", VCLASS_MAP[veh_type],
+        "--trip-attributes", f'type="{veh_type}"',
+        "--prefix", f"{veh_type}_",
+        "--seed", "42",
     ]
-    print("Routing merged trips with duarouter...")
     subprocess.run(cmd, check=True)
-    print(f"Done. Routed demand written to {routed_file}")
-
-
-def merge_trip_files(trip_files, out_path):
-    import xml.etree.ElementTree as ET
-
-    all_trips = []
-    for f in trip_files:
-        tree = ET.parse(f)
-        for trip in tree.getroot().findall("trip"):
-            all_trips.append(trip)
-    all_trips.sort(key=lambda t: float(t.get("depart")))
-
-    root = ET.Element("routes")
-    for trip in all_trips:
-        root.append(trip)
-    ET.ElementTree(root).write(out_path, encoding="UTF-8", xml_declaration=True)
-    print(f"Merged {len(all_trips)} trips -> {out_path}")
+    return out_trips
 
 
 if __name__ == "__main__":
-    main()
+    trip_files = []
+    for veh_type, vph in MODE_SPLIT.items():
+        print(f"Generating {vph} veh/h of {veh_type}...")
+        trip_files.append(run_random_trips(veh_type, vph))
+
+    merged = f"{OUT_DIR}/astra_biz_center.trips.xml"
+    print(f"Merging trip files into {merged}...")
+    with open(merged, "w") as out:
+        out.write('<?xml version="1.0" encoding="UTF-8"?>\n<routes>\n')
+        all_trips = []
+        for tf in trip_files:
+            with open(tf) as f:
+                content = f.read()
+            import re
+            all_trips.extend(re.findall(r"<trip .*?/>", content, re.DOTALL))
+        # sort by depart time
+        def depart_time(trip_str):
+            m = re.search(r'depart="([\d.]+)"', trip_str)
+            return float(m.group(1)) if m else 0.0
+        all_trips.sort(key=depart_time)
+        for t in all_trips:
+            out.write(f"    {t}\n")
+        out.write("</routes>\n")
+
+    routed = f"{OUT_DIR}/astra_biz_center.rou.xml"
+    print(f"Routing trips through the network with duarouter -> {routed}...")
+    subprocess.run([
+        "duarouter",
+        "-n", NET,
+        "-r", merged,
+        "-a", VTYPES,
+        "-o", routed,
+        "--ignore-errors",
+        "--seed", "42",
+    ], check=True)
+
+    print("Done.")
